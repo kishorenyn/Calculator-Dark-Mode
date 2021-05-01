@@ -1,0 +1,20 @@
+function liveScreen(value) {
+    document.getElementById("result").value += value;
+}
+
+function clearScreen() {
+    document.getElementById("result").value = '';
+}
+
+function switchTheme() {
+    let darkmode = document.getElementById("dark-mode");
+    let theme = document.getElementById("theme");
+
+    if(theme.getAttribute("href") == "light.css") {
+        theme.href = "dark.css";
+        darkmode.innerHTML = "Light mode"
+    } else {
+        theme.href = "light.css";
+        darkmode.innerHTML = "Dark mode"
+    }
+}
